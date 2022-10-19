@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, rgb(56, 56, 56), rgb(8, 80, 74));
+  color: rgb(236, 235, 235);
+  font-family: "Titan One", cursive;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 120%;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 15px;
+  font-size: 115%;
+  border: none;
+  background: white;
+}
+
+form button {
+  color: rgb(8, 80, 74);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  color: white;
+  background: rgb(7, 59, 55);
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 5%;
+  background:aliceblue;
+  color: black;
+  font-size: 120%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+    background-color: rgb(226, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+.complete-btn {
+    background-color: rgb(0, 158, 26);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
