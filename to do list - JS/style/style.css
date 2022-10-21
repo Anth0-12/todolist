@@ -143,6 +143,7 @@ nav {
   width: 50%;
   flex-direction: column;
   border-right: 1px solid black;
+  
 }
 
     h2 {  /*=== titre 'a faire' et 'fait' des deux colonnes ====*/
@@ -156,26 +157,35 @@ nav {
     }
 
         .todo-cont {   /*=== bloc dans lequel on range les tâches non faites ====*/
-          max-width: 100%;
-          display: flex;
+          width: 95%;
+          display: block;
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          overflow: scroll;
+          scrollbar-color: #A6A5A4 #decfc800;
+          scrollbar-width: thin;
         }
 
             .todo {   /*=== bloc contenant: tâche + boutons + icones  ====*/
-              max-width: 100%;
+              max-width: 90%;
               margin: 5%;
               color: black;
               display: flex;
               justify-content: space-between;
               align-items: center;
               transition: all 0.5s ease;
+              gap: 15px;
             }
 
                 .tache {    /*=== texte de la tâche ====*/
-                  padding-right: 20px;
+                  width: 100%;
                   font-size: 130%;
+                  display: block;
+                  text-align: center;
+                  overflow: scroll;
+                  scrollbar-color: #A6A5A4 #decfc800;
+                  scrollbar-width: thin;
                 }
 
                     .action {  /*=== Bloc des boutons ====*/
@@ -218,7 +228,10 @@ nav {
 }
 
 .fait {  /*=== bloc dans lequel on range les tâches faites ====*/
-  max-width: 100%;
+  width: 95%;
+  overflow: scroll;
+  scrollbar-color: #A6A5A4 #decfc800;
+  scrollbar-width: thin;
 }
 
 /*======================== fin colonne de gauche ==========================*/
@@ -326,7 +339,6 @@ nav {
   height: 60vh;
   width: 100vw;
   border: none;
-  scrollbar-width: auto;
 }
 
     h2 {  /*=== titre 'a faire' et 'fait' des deux colonnes ====*/
