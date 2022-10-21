@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Caveat Brush', cursive;
+  display: flex;
+  height: 900px;
+}
+
+
+/*================================ barre latéral gauche ==================================*/
+
+
+header {
+  height: 1000px;
+  width: 20%;
+  background-color: #A6A5A4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 10px black;
+  z-index: 20;
+}
+
+h1 {
+  color: white;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 350%;
+}
+
+
+/*================================ fin barre latéral gauche ==================================*/
+
+
+
+/*!================================ contenu principal ==================================*/
+
+section {
+  height: 100%;
+  width: 80%;
+}
+
+
+/*========================== barre nav du haut ==============================*/
+
+nav {
+  height: 100px;
+  width: 100%;
+  background-color: #FCEBE3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 1px 0px 10px black;
+  color: #000000;
+  font-size: 230%;
+  z-index: 10;
+}
+
+/*=================== champs de saisie ========================*/
+
+.form {
+  width: 40%;
+  min-height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+    .todo-input {
+      width: 70%;
+      color: rgb(0, 0, 0);
+      height: 30px;
+      border: none;
+      font-family: 'Caveat Brush', cursive;
+    }
+
+    .todo-input::placeholder {
+      color: rgba(0, 0, 0, 0.342);
+      font-size: 120%;
+    }
+
+    .todo-button {
+      padding: 5px;
+      font-size: 50%;
+      border: none;
+      background: white;
+      height: 30px;
+      color: #A6A5A4;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+        .todo-button:hover {
+          color: white;
+          background: #A6A5A4;
+        }
+
+/*=================== fin champs de saisie ========================*/
+
+/*========================== fin barre nav du haut ==============================*/
+
+
+
+/*======================== image de fond ==========================*/
+
+#colonnes {
+  display: flex;
+  height: 900px;
+  width: 100%;
+}
+
+#colonnes::before {
+  content: "";
+  background-image: url("../img/bloc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.1;
+  z-index: -50;
+  height: 900px;
+}
+
+/*======================== fin image de fond ==========================*/
+
+
+
+/*======================== colonne de gauche ==========================*/
+
+.gauche {   /*=== colonne de gauche ====*/
+  display: flex;
+  align-items: center;
+  height: 900px;
+  width: 50%;
+  flex-direction: column;
+  border-right: 1px solid black;
+}
+
+    h2 {  /*=== titre 'a faire' et 'fait' des deux colonnes ====*/
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      width: 70%;
+      margin-top: 20px;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.617);
+      font-size: 180%;
+    }
+
+        .todo-cont {   /*=== bloc dans lequel on range les tâches non faites ====*/
+          max-width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+
+            .todo {   /*=== bloc contenant: tâche + boutons + icones  ====*/
+              max-width: 100%;
+              margin: 5%;
+              color: black;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              transition: all 0.5s ease;
+            }
+
+                .tache {    /*=== texte de la tâche ====*/
+                  padding-right: 20px;
+                  font-size: 130%;
+                }
+
+                    .action {  /*=== Bloc des boutons ====*/
+                      display: flex;
+                    }
+
+                        .trash-btn,   /*=== Boutons ====*/
+                        .complete-btn,
+                        .modif-btn {
+                          background-color: rgba(0, 158, 26, 0);
+                          color: rgb(216, 0, 0);
+                          border: none;
+                          padding: 5px;
+                          cursor: pointer;
+                          font-size: 100%;
+                        }
+
+                        .complete-btn {
+                          color: rgb(0, 161, 22);
+                        }
+
+                        .modif-btn {
+                          color: rgb(0, 100, 231);
+                        }
+
+                        
+
+/*======================== fin colonne de gauche ==========================*/
+
+
+
+/*======================== colonne de droite ==========================*/
+
+.droite {   /*=== colonne de droite ====*/
+  display: flex;
+  align-items: center;
+  height: 900px;
+  width: 50%;
+  flex-direction: column;
+}
+
+.fait {  /*=== bloc dans lequel on range les tâches faites ====*/
+  max-width: 100%;
+}
+
+/*======================== fin colonne de gauche ==========================*/
+
+/*!================================ contenu principal ==================================*/
+
+
+
+
+/*!================================ responsive ==================================*/
+
+/*================================ responsive telephone ==================================*/
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  body {
+    height: 100vh;
+    display: block;
+  }
+
+  /*================================ barre latéral gauche ==================================*/
+
+
+header {
+  display: flex;
+  height: 20vh;
+  width: 100vw;
+  flex-direction: column;
+  position: relative;
+  z-index: 20;
+}
+
+h1 {
+  font-size: 280%;
+}
+
+
+/*================================ fin barre latéral gauche ==================================*/
+
+
+
+/*!================================ contenu principal ==================================*/
+
+section {
+  height: 80vh;
+  width: 100vw;
+}
+
+
+/*========================== barre nav du haut ==============================*/
+
+nav {
+  height: 20vh;
+  width: 100vw;
+  font-size: 200%;
+  z-index: 10;
+}
+
+/*=================== champs de saisie ========================*/
+
+.form {
+  width: 70%;
+}
+
+    .todo-input {
+      width: 70%;
+      height: 30px;
+    }
+
+    .todo-input::placeholder {
+      color: rgba(0, 0, 0, 0.342);
+      font-size: 120%;
+    }
+
+    .todo-button {
+      font-size: 50%;
+      height: 30px;
+    }
+
+/*=================== fin champs de saisie ========================*/
+
+/*========================== fin barre nav du haut ==============================*/
+
+
+
+/*======================== image de fond ==========================*/
+
+#colonnes {
+  display: block;
+  height: 60vh;
+}
+
+#colonnes::before {
+  top: 40vh;
+  height: 120vh;
+}
+
+/*======================== fin image de fond ==========================*/
+
+
+
+/*======================== colonne de gauche ==========================*/
+
+.gauche {   /*=== colonne de gauche ====*/
+  height: 60vh;
+  width: 100vw;
+  border: none;
+  scrollbar-width: auto;
+}
+
+    h2 {  /*=== titre 'a faire' et 'fait' des deux colonnes ====*/
+      height: 30px;
+      font-size: 140%;
+      margin-bottom: 10px;
+    }
+    .todo-cont {   /*=== bloc dans lequel on range les tâches non faites ====*/
+      width: 95%;
+      display: block;
+      overflow: scroll;
+      scrollbar-color: #A6A5A4 #decfc8;
+      
+    }
+        .todo {   /*=== bloc contenant: tâche + boutons + icones  ====*/
+          margin: 1%;
+          max-width: 90%;
+          gap: 15px;
+        }
+
+            .tache {    /*=== texte de la tâche ====*/
+              height: 30px;
+              width: 100%;
+              font-size: 100%;
+              display: block;
+              text-align: end;
+              overflow: scroll;
+              scrollbar-color: #A6A5A4 #decfc8;
+            }
+
+/*======================== fin colonne de gauche ==========================*/
+
+
+
+/*======================== colonne de droite ==========================*/
+
+.droite {   /*=== colonne de droite ====*/
+  height: 60vh;
+  width: 98vw;
+}
+
+.fait {
+  width: 95%;
+  overflow: scroll;
+  scrollbar-color: #A6A5A4 #decfc8;
+}
+
+/*======================== fin colonne de gauche ==========================*/
+
+/*!================================ contenu principal ==================================*/
+
+/*================================ responsive telephone ==================================*/
+
+/*!================================ fin responsive ==================================*/
+}
